@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Travel Smart</title>
+
+
+
+
+    <script type="text/javascript">
+        var valid = false;
+        function validate() {
+            var msg = "";
+            var fname = document.myts.fname.value;
+            var lname = document.myts.lname.value;
+            var email = document.myts.email.value;
+            var reemail= document.myts.reemail.value;
+            var user = document.myts.user.value;
+            var pwd = document.myts.pwd.value;
+            var repwd = document.myts.repwd.value;
+            if (fname.length == 0 && lname.length == 0 && email.length == 0 && reemail.length == 0 && user.length == 0 && pwd.length == 0 && repwd.length == 0)
+                msg = msg + "Please provide details for all fields to register successfully \n";
+            if (msg.length > 0) {
+                window.alert(msg);
+                valid = false;
+            }
+            else
+                valid = true;
+            return valid;
+        }
+    </script>
+
+
+</head>
+<body>
+
+<header class="page2">
+<section id="about" class="about">
+    <div class="container">
+        <div class="row">
+            <div class="form-module">
+
+                <div class="form-box">
+                    <div class="form-top">
+                        <div class="form-top-left">
+                            <h3><b>REGISTER</b></h3>
+                        </div>
+                        <div class="form-top-right">
+                            <i class="fa fa-pencil"></i>
+                        </div>
+                    </div>
+                    <div class="form-bottom">
+                        <form role="form" name="myts" onsubmit="return validate()" method="post"
+                              class="registration-form" action="login.html" data-abide>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-first-name">First name</label>
+                                <input type="text" name="fname" placeholder="First name..."
+                                       class="form-first-name form-control" id="form-first-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-last-name">Last name</label>
+                                <input type="text" name="lname" placeholder="Last name..."
+                                       class="form-last-name form-control" id="form-last-name">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-email">Email address</label>
+                                <input type="text" name="email" placeholder="Enter your Email address..."
+                                       class="form-email form-control" id="form-email">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="sr-only" for="form-email">Confirm Email address</label>
+                                <input type="text" name="reemail" placeholder="Re-Enter your Email address to confirm..."
+                                       class="form-email form-control" id="form-re-email">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="sr-only" for="form-user">User Name</label>
+                                <input type="text" name="user" placeholder="Enter User Name..."
+                                       class="form-user form-control" id="form-user">
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only" for="form-pwd">Password</label>
+                                <input type="password" name="pwd" placeholder="Enter your Password..."
+                                       class="form-pwd form-control" id="form-pwd">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="sr-only" for="form-re-password">Confirm Password</label>
+                                <input type="text" name="repwd" placeholder="Confirm your Password..."
+                                       class="form-re-password form-control" id="form-re-password">
+                            </div>
+                            <input type="checkbox" name="t_and_c" id="t_and_c" class="hidden" value="1">I Agree to the Terms and Conditions
+                            <br>
+                            <button type="submit" class="btn" onclick="window.location.href='login.html'">Register</button>
+                        </form>
+
+                        <br>
+                            <button type="submit" class="btn" onclick="window.location.href='main.html'">Cancel</button>
+                            <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</header>
+</body>
+</html>
