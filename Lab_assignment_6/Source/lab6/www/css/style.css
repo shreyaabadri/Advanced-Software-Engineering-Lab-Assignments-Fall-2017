@@ -1,0 +1,7 @@
+/* Empty. Add your own CSS if you like */
+.search {
+background: url("/www/img/back.jpg") no-repeat center;
+}
+ion-content.item item-input.myinput{
+     background-color: #366363!important;
+}
