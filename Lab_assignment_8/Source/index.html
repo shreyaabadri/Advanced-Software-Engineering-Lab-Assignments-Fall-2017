@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+
+    <title>Lab8 - Calories Calculator</title>
+    <style>
+        body{
+            background: url("back.jpg") no-repeat center;
+            background-size:cover;
+        }
+    </style>
+</head>
+<body ng-app="ap">
+<div ng-controller="con" style="margin-left: 400px;margin-top: 100px;margin-right: 400px; text-align: center">
+    <h1 style="color: orange">Calories Calculator</h1>
+    <br>
+    <input type="text" placeholder="Enter Food Name" style="border-radius:50px;padding: 4px;border: 10px;height: 20px; width:80%" ng-model="in"/>
+    <Button ng-click="search()" style="background-color: orange;border-radius: 20px;padding: 4px;border: 10px;width: 70px;height: 25px">Search</Button></br>
+    <div id="col" style="display:none">
+        <p ng-model="final">
+        <table BORDER=2 CELLPADDING=6 >
+            <TR><TH style="color:black; background:orange" COLSPAN=2>FOOD DETAILS</TH></TR>
+            <TR><td style="width: 575px; height:200px"><img src="{{final.image}}"></td></TR>
+
+
+            <table BORDER=2 CELLPADDING=6 style="">
+                <TR><TD style="color: white;width: 275px;font-size: larger;background-color: grey">Calories</TD><TD style="color: white;width: 283px;font-size: larger;text-align: center">{{final.score}}</TD></TR>
+                <TR><TD style="color: white;width: 110px;font-size: larger;background-color: gray">Weight</TD><TD style="color: white;width: 115px;font-size: larger;text-align: center">{{final.qt}}</TD></TR></table>
+
+        </table >
+        </p>
+    </div>
+</div>
+</body>
+<script src="app.js"></script>
+
+</html>
