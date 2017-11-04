@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/image"
+    tools:context="com.ase.assignment.lab10.MainActivity"
+    tools:deviceIds="wear_round">
+
+    <TextView
+        android:id="@+id/headingtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CALORIES COUNTER"
+        android:textSize="18sp"
+        android:textColor="@color/dark_blue"
+        android:textStyle="bold"
+        android:layout_marginTop="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/foodname"
+        android:hint="Enter Food Name"
+        android:textColorHint="@color/grey"
+        android:textSize="14sp"
+        android:textColor="#575252"
+        android:layout_below="@+id/headingtext"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="    GET CALORIES    "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/getcalories"
+        android:onClick="caloriesCount"
+        android:background="@color/blue"
+        android:textColor="@color/white"
+        android:layout_below="@+id/foodname"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:hint="Calories display here"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/outputdisplay"
+        android:layout_marginLeft="1dp"
+        android:textColorHint="@color/grey"
+        android:layout_below="@+id/getcalories"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+
+</RelativeLayout>
